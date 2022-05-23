@@ -45,7 +45,7 @@ public class SavingAccountController {
 			log.info("a SavingAccount was updated");
 			return sarepo.save(s);
 		});
-	}
+	}                                                                                                                          
 	
 	@PostMapping("/save")
 	public Mono<SavingAccount> save(@RequestBody SavingAccount savingAccount){
@@ -55,6 +55,11 @@ public class SavingAccountController {
 	@DeleteMapping("/delete")
 	public Mono<Void> delete(@RequestBody SavingAccount savingAccount){
 		return sarepo.delete(savingAccount);
+	}
+	
+	@GetMapping("/findByIdCustomerPerson/{idCustomerPerson}")
+	public Mono<SavingAccount> findByIdCustomerPerson(@PathVariable String idCustomerPerson){
+		return sarepo.findByIdCustomerPerson(idCustomerPerson);
 	}
 
 }

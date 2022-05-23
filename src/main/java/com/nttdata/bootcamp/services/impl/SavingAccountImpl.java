@@ -35,5 +35,11 @@ public class SavingAccountImpl implements ISavingAccountService {
 	public Mono<Void> delete(SavingAccount savingAccount) {
 		return pcrepo.delete(savingAccount);
 	}
+
+	@Override
+	public Mono<SavingAccount> findByIdCustomerPerson(String idCustomerPerson) {
+		// TODO Auto-generated method stub
+		return pcrepo.findByIdCustomerPerson(idCustomerPerson);
+	}
 	
 }

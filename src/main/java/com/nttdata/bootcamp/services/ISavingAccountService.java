@@ -10,4 +10,5 @@ public interface ISavingAccountService {
 	public Mono<SavingAccount> findById(String id);
 	public Mono<SavingAccount> save(SavingAccount savingAccount);
 	public Mono<Void> delete(SavingAccount savingAccount);
+	public Mono<SavingAccount> findByIdCustomerPerson(String idCustomerPerson);
 }
